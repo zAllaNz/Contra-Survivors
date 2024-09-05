@@ -1,7 +1,17 @@
 move_speed = 4;
 x_arma = 28;
 y_arma = 9;
-instance_create_layer(x+x_arma, y+y_arma,"instances", obj_teste);
+instance_create_layer(x+x_arma, y+y_arma,"instances", obj_teste); // Temporário (excluir)
+state = character_state.idle;
+fire_rate = 15;
+time_since_last_shot = 0;
+xp = 0;
+collect_radius = 50;
+
+enum character_state{
+	idle, walk, death
+}
+
 
 function move_e_colide(move_speed, move_x, move_y){
 	// Normaliza o movimento para garantir a mesma velocidade em todas as direções
@@ -37,4 +47,8 @@ function move_e_colide(move_speed, move_x, move_y){
 function inverter_imagem_y()
 {
 	image_yscale *= -1;
+}
+
+function increase_xp(qntd_xp){
+	xp += qntd_xp;
 }

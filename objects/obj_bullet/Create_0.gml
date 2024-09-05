@@ -1,5 +1,5 @@
 image_angle = obj_player.image_angle;
-velocidade = 5;
+velocidade = 7;
 speed_x = lengthdir_x(velocidade, image_angle);
 speed_y = lengthdir_y(velocidade, image_angle);
 
