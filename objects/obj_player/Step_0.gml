@@ -1,10 +1,8 @@
-
 // Captura o movimento do jogador
 var move_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var move_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 var click = mouse_check_button(mb_left);
 
-// Interpolar o ângulo
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 move_e_colide(move_speed, move_x, move_y);
 var ponta_arma_x = x + lengthdir_x(x_arma, image_angle) - lengthdir_y(y_arma, image_angle);
@@ -24,6 +22,8 @@ if(click){
 	}
 }
 
+show_debug_message(xp_to_levelup);
+show_debug_message(level);
 
 switch state{
 	case character_state.idle:

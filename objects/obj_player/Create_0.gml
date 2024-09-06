@@ -6,6 +6,8 @@ state = character_state.idle;
 fire_rate = 15;
 time_since_last_shot = 0;
 xp = 0;
+level = 1;
+xp_to_levelup = 30;
 collect_radius = 50;
 
 enum character_state{
@@ -52,3 +54,22 @@ function inverter_imagem_y()
 function increase_xp(qntd_xp){
 	xp += qntd_xp;
 }
+
+function increase_level(){
+	level++;
+}
+
+function set_xp_to_levelup(){
+	xp_to_levelup *= 1.5;
+	xp_to_levelup = round(xp_to_levelup);
+}
+
+function level_up(){
+	if(xp >= xp_to_levelup){
+		increase_level();
+		set_xp_to_levelup();
+	}
+}
+
+
+
