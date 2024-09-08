@@ -12,15 +12,6 @@ if(escolher){
 	escolher = false;
 }
 
-if(keyboard_check_pressed(ord("G"))){
-	escolher = true;
-}
-
-if(!player.pause){
-	exit;
-}
-
-
 
 
 

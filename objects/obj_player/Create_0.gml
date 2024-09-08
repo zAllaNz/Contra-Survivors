@@ -1,9 +1,14 @@
+// Atributos do personagem
 move_speed = 4;
+armor = 4;
+hp = 30;
+fire_rate = 15;
+damage = 5;
+
 x_arma = 28;
 y_arma = 9;
 instance_create_layer(x+x_arma, y+y_arma,"instances", obj_teste); // Temporário (excluir)
 state = character_state.idle;
-fire_rate = 15;
 time_since_last_shot = 0;
 xp = 0;
 level = 1;
@@ -79,5 +84,23 @@ function upgrade(){
 	scr_switch_pause();
 }
 
+function speed_up(qntd){
+	move_speed += qntd;
+}
 
+function hp_up(qntd){
+	hp += qntd;
+}
+
+function armor_up(qntd){
+	armor += qntd;
+}
+
+function fire_rate_up(qntd){
+	fire_rate -= qntd;
+}
+
+function damage_up(qntd){
+	damage += qntd;
+}
 

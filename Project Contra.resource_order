@@ -36,7 +36,6 @@
     {"name":"obj_exp_small","order":1,"path":"objects/obj_exp_small/obj_exp_small.yy",},
     {"name":"obj_exp_medium","order":2,"path":"objects/obj_exp_medium/obj_exp_medium.yy",},
     {"name":"spr_level_up_hud","order":7,"path":"sprites/spr_level_up_hud/spr_level_up_hud.yy",},
-    {"name":"obj_sprite","order":2,"path":"objects/obj_sprite/obj_sprite.yy",},
     {"name":"obj_teste","order":1,"path":"objects/obj_teste/obj_teste.yy",},
     {"name":"spr_upgrade_sheet","order":6,"path":"sprites/spr_upgrade_sheet/spr_upgrade_sheet.yy",},
     {"name":"obj_gun","order":1,"path":"objects/obj_gun/obj_gun.yy",},

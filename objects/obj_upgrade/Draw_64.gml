@@ -16,7 +16,10 @@ for(var i = 0; i < upgrade_num; i++){
 		spr_xx + tam_spr/2, yy + tam_spr/2)){
 		alpha = 1;
 		draw_text(mouse_xx, mouse_yy, "oi");
-		if(mouse_check_button(mb_left)){
+		if(mouse_check_button_pressed(mb_left)){
+			escolher = true;
+			var teste = ds_grid_get(dataset, upgrades.scripts, item);
+			teste();
 			scr_switch_pause();
 		}
 	}
@@ -25,6 +28,11 @@ for(var i = 0; i < upgrade_num; i++){
 	}
 	draw_sprite_ext(spr_level_up_hud, -1, spr_xx, yy, 1, 1, 0, c_white, alpha);
 	draw_sprite(spr_upgrade_sheet, item, spr_xx-98, yy-72);
+	draw_set_font(fnt_pixel);
+	draw_set_halign(fa_center);
+	draw_text(spr_xx+30, yy-75, dataset[# upgrades.nome, item]);
+	draw_set_font(-1);
+	draw_text(spr_xx, yy, dataset[# upgrades.descricao, item]);
 }
 
 
