@@ -53,7 +53,6 @@
     {"id":{"name":"obj_upgrade","path":"objects/obj_upgrade/obj_upgrade.yy",},},
     {"id":{"name":"scr_camera","path":"scripts/scr_camera/scr_camera.yy",},},
     {"id":{"name":"spr_exp_high","path":"sprites/spr_exp_high/spr_exp_high.yy",},},
-    {"id":{"name":"ph_level_up_hud","path":"sprites/ph_level_up_hud/ph_level_up_hud.yy",},},
     {"id":{"name":"obj_exp_high","path":"objects/obj_exp_high/obj_exp_high.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},},
