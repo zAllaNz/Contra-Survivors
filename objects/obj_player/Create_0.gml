@@ -9,6 +9,9 @@ xp = 0;
 level = 1;
 xp_to_levelup = 30;
 collect_radius = 50;
+pause = false;
+teste = false;
+
 
 enum character_state{
 	idle, walk, death
@@ -68,7 +71,12 @@ function level_up(){
 	if(xp >= xp_to_levelup){
 		increase_level();
 		set_xp_to_levelup();
+		upgrade();
 	}
+}
+
+function upgrade(){
+	scr_switch_pause();
 }
 
 
