@@ -1,7 +1,7 @@
 // Atributos do personagem
 move_speed = 4;
 armor = 4;
-hp = 4;
+hp = 20;
 fire_rate = 15;
 damage = 5;
 iframe_max = 60;
