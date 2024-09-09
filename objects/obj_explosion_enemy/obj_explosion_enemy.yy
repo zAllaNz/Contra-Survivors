@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object12",
+  "name": "obj_explosion_enemy",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Coletáveis",
-    "path": "folders/Objects/Coletáveis.yy",
+    "name": "Efeitos",
+    "path": "folders/Objects/Efeitos.yy",
   },
-  "parentObjectId": {
-    "name": "obj_coletavel",
-    "path": "objects/obj_coletavel/obj_coletavel.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -31,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_exp_great",
-    "path": "sprites/spr_exp_great/spr_exp_great.yy",
+    "name": "spr_explosion_enemy",
+    "path": "sprites/spr_explosion_enemy/spr_explosion_enemy.yy",
   },
   "spriteMaskId": null,
   "visible": true,

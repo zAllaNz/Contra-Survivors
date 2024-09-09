@@ -12,6 +12,10 @@ iframe_on = false;
 iframe_count = 0;
 count = 0;
 count_max = 20;
+orb_list = [obj_exp_small, obj_exp_medium, obj_exp_high, obj_exp_great];
+orb_chance = [60, 25, 10, 5];
+efeito_explosion = obj_explosion_enemy;
+
 
 function enemy_hit(hit){
 	if(hit){
@@ -60,7 +64,32 @@ function hp_decrease(damage){
 		hp -= damage;
 		iframe_on = true;
 		if(hp <= 0){
+			selecionar_orb()
+			instance_create_layer(x, y, "instances", efeito_explosion);
 			instance_destroy();
 		}
 	}
 }
+
+function selecionar_orb() {
+    var random_value = irandom(99);
+    var acumulado = 0;
+
+    for (var i = 0; i < array_length(orb_chance); i++) {
+        acumulado += orb_chance[i];
+        if (random_value < acumulado) {
+			instance_create_layer(x, y, "lower", orb_list[i]);
+			show_debug_message(random_value);
+			return;
+        }
+    }
+}
+
+function ajustar_chances(level) {
+    var aumento = round(level * 1.5);
+    orb_chance[0] = max(5, orb_chance[0] - aumento);
+    orb_chance[1] = max(10, orb_chance[1] - (aumento / 2));
+    orb_chance[2] = min(25, orb_chance[2] + (aumento / 2));
+    orb_chance[3] = min(60, orb_chance[3] + aumento);
+}
+ajustar_chances(player.level);

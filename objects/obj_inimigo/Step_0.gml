@@ -1,3 +1,7 @@
+if(player.pause){
+	exit;
+}
+
 var hit = collision_circle(x, y, radius, obj_player, false, false);
 enemy_hit(hit);
 enemy_move();

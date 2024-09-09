@@ -39,6 +39,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Upgrade","folderPath":"folders/Sprites/Upgrade.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Inimigos","folderPath":"folders/Sprites/Inimigos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Inimigos","folderPath":"folders/Objects/Inimigos.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Efeitos","folderPath":"folders/Objects/Efeitos.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -48,6 +49,7 @@
   },
   "resources": [
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
+    {"id":{"name":"obj_explosion_enemy","path":"objects/obj_explosion_enemy/obj_explosion_enemy.yy",},},
     {"id":{"name":"spr_bullet_effect","path":"sprites/spr_bullet_effect/spr_bullet_effect.yy",},},
     {"id":{"name":"obj_bullet_effect","path":"objects/obj_bullet_effect/obj_bullet_effect.yy",},},
     {"id":{"name":"spr_exp_small","path":"sprites/spr_exp_small/spr_exp_small.yy",},},
@@ -75,9 +77,10 @@
     {"id":{"name":"spr_level_up_hud","path":"sprites/spr_level_up_hud/spr_level_up_hud.yy",},},
     {"id":{"name":"obj_coletavel","path":"objects/obj_coletavel/obj_coletavel.yy",},},
     {"id":{"name":"obj_teste","path":"objects/obj_teste/obj_teste.yy",},},
+    {"id":{"name":"spr_explosion_enemy","path":"sprites/spr_explosion_enemy/spr_explosion_enemy.yy",},},
     {"id":{"name":"spr_upgrade_sheet","path":"sprites/spr_upgrade_sheet/spr_upgrade_sheet.yy",},},
     {"id":{"name":"obj_gun","path":"objects/obj_gun/obj_gun.yy",},},
-    {"id":{"name":"Object12","path":"objects/Object12/Object12.yy",},},
+    {"id":{"name":"obj_exp_great","path":"objects/obj_exp_great/obj_exp_great.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [

@@ -1,2 +1,2 @@
 event_inherited();
-xp = 30;
+xp = 15;

@@ -25,6 +25,7 @@
     {"name":"Upgrade","order":8,"path":"folders/Sprites/Upgrade.yy",},
     {"name":"Inimigos","order":9,"path":"folders/Sprites/Inimigos.yy",},
     {"name":"Inimigos","order":7,"path":"folders/Objects/Inimigos.yy",},
+    {"name":"Efeitos","order":8,"path":"folders/Objects/Efeitos.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_bullet_effect","order":2,"path":"objects/obj_bullet_effect/obj_bullet_effect.yy",},
@@ -41,7 +42,8 @@
     {"name":"obj_exp_medium","order":2,"path":"objects/obj_exp_medium/obj_exp_medium.yy",},
     {"name":"spr_level_up_hud","order":1,"path":"sprites/spr_level_up_hud/spr_level_up_hud.yy",},
     {"name":"obj_teste","order":1,"path":"objects/obj_teste/obj_teste.yy",},
+    {"name":"spr_explosion_enemy","order":1,"path":"sprites/spr_explosion_enemy/spr_explosion_enemy.yy",},
     {"name":"obj_gun","order":1,"path":"objects/obj_gun/obj_gun.yy",},
-    {"name":"Object12","order":4,"path":"objects/Object12/Object12.yy",},
+    {"name":"obj_exp_great","order":4,"path":"objects/obj_exp_great/obj_exp_great.yy",},
   ],
 }
