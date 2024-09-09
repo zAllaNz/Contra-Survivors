@@ -20,7 +20,7 @@ enum upgrades{
 }
 
 var speed_up_function = function() {
-    player.speed_up(0.5);
+    player.speed_up();
 };
 
 var armor_function = function() {

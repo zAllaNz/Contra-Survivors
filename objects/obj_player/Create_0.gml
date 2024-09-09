@@ -1,10 +1,14 @@
 // Atributos do personagem
 move_speed = 4;
 armor = 4;
-hp = 30;
+hp = 4;
 fire_rate = 15;
 damage = 5;
+iframe_max = 60;
+iframe_on = false;
+iframe_count = 0;
 
+hp_atual = hp;
 x_arma = 28;
 y_arma = 9;
 instance_create_layer(x+x_arma, y+y_arma,"instances", obj_teste); // Temporário (excluir)
@@ -24,6 +28,7 @@ enum character_state{
 
 
 function move_e_colide(move_speed, move_x, move_y){
+	image_angle = point_direction(x, y, mouse_x, mouse_y);
 	// Normaliza o movimento para garantir a mesma velocidade em todas as direções
 	if (move_x != 0 or move_y != 0) {
 	    var move_len = sqrt(move_x * move_x + move_y * move_y);
@@ -84,12 +89,32 @@ function upgrade(){
 	scr_switch_pause();
 }
 
-function speed_up(qntd){
-	move_speed += qntd;
+/// @func speed_up(),
+/// @desc Esta função aumenta a velocidade do player. Altera diretamente o atributo do objeto player.
+function speed_up(){
+	move_speed += move_speed * 0.1;
 }
 
 function hp_up(qntd){
 	hp += qntd;
+}
+
+function hp_decrease(damage){
+	var aux = (armor - damage)
+	if(hp > 0){
+		if(aux < 0 and !iframe_on){
+			hp += aux;
+			hp_zero();
+		}
+		iframe_on = true;
+	}
+}
+
+function hp_zero(){
+	if(hp <= 0){
+		state = character_state.death;
+		image_index = 0;
+	}	
 }
 
 function armor_up(qntd){
@@ -103,4 +128,6 @@ function fire_rate_up(qntd){
 function damage_up(qntd){
 	damage += qntd;
 }
+
+
 

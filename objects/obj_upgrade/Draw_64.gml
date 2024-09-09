@@ -18,8 +18,8 @@ for(var i = 0; i < upgrade_num; i++){
 		draw_text(mouse_xx, mouse_yy, "oi");
 		if(mouse_check_button_pressed(mb_left)){
 			escolher = true;
-			var teste = ds_grid_get(dataset, upgrades.scripts, item);
-			teste();
+			var aux = ds_grid_get(dataset, upgrades.scripts, item);
+			aux();
 			scr_switch_pause();
 		}
 	}

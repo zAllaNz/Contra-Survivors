@@ -7,7 +7,6 @@ if(escolher){
 			up = irandom(ds_grid_height(dataset) - 1);
 		}
 		ds_list_add(upgrade_list, up);
-		show_debug_message(upgrade_list[| i]);
 	}
 	escolher = false;
 }
