@@ -1,11 +1,13 @@
 image_angle = obj_player.image_angle;
 velocidade = 7;
-speed_x = lengthdir_x(velocidade, image_angle);
-speed_y = lengthdir_y(velocidade, image_angle);
 player = obj_player;
 radius = 4;
+speed_x = -1;
+speed_y = -1;
 
 function move_bullet(){
+	speed_x = lengthdir_x(velocidade, image_angle);
+	speed_y = lengthdir_y(velocidade, image_angle);
 	x += speed_x;
 	y += speed_y;
 }

@@ -15,7 +15,10 @@ count_max = 20;
 orb_list = [obj_exp_small, obj_exp_medium, obj_exp_high, obj_exp_great];
 orb_chance = [60, 25, 10, 5];
 efeito_explosion = obj_explosion_enemy;
-
+speed_room = 60;
+cooldown = 0;
+cooldown_max = 10 * speed_room;
+unmove = false;
 
 function enemy_hit(hit){
 	if(hit){
@@ -56,6 +59,20 @@ function flashing(){
 			image_blend = c_white;
 		}
 		count++;
+	}
+}
+
+function enemy_bullet(bullet){
+	if(bullet){
+		if(cooldown >= cooldown_max){
+			cooldown = 0;
+			unmove = true;
+			image_speed = 0;
+			var proj = instance_create_layer(x, y, "projetil", obj_bullet_ant);
+			proj.image_angle = angle;		
+			proj.velocidade = 2;
+			proj.radius = 10;
+		}
 	}
 }
 

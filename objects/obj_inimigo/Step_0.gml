@@ -1,7 +1,11 @@
-if(player.pause){
+cooldown++;
+if(cooldown >= cooldown_max/4){
+	unmove = false;
+	image_speed = 1;
+}
+if(player.pause or unmove){
 	exit;
 }
-
 var hit = collision_circle(x, y, radius, obj_player, false, false);
 enemy_hit(hit);
 enemy_move();
