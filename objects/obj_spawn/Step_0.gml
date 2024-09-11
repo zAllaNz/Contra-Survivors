@@ -5,7 +5,7 @@ if(player.pause){
 spawn_count++;
 if(spawn_count >= spawn_max and global.spawn_control <= 150){
 	spawn_count = 0 
-	for(var i = 0; i <= player.level; i++){
+	for(var i = 0; i <= player.level + 1; i++){
 		global.spawn_control++;
 		var lado = irandom(1);
 		if(lado == 0){

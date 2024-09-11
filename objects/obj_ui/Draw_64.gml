@@ -1,0 +1,12 @@
+draw_sprite(mugshot, 0, 5, 5);
+var bar_width = 235;
+var bar_height = 20;
+var bar_x = 135;
+var bar_y = 20;
+draw_set_color(c_black);
+draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, false);
+draw_set_color(c_red);
+var hp_ratio = player.hp / player.hp_atual;
+draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_ratio), bar_y + bar_height, false);
+draw_set_color(c_white);
+draw_text((bar_x + bar_width) / 1.75, bar_y, string(player.hp_atual) + " / " + string(player.hp));

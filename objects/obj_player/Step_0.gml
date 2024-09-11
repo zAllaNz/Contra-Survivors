@@ -7,6 +7,7 @@ if(pause){
 	exit;
 }
 
+show_debug_message(level);
 var ponta_arma_x = x + lengthdir_x(x_arma, image_angle) - lengthdir_y(y_arma, image_angle);
 var ponta_arma_y = y + lengthdir_y(x_arma, image_angle) + lengthdir_x(y_arma, image_angle);
 

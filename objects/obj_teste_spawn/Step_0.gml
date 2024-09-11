@@ -1,4 +1,4 @@
-var select = irandom(1);
+var select = irandom(random_enemy);
 if(place_meeting(x,y,obj_wall)){
 	global.spawn_control--;
 	instance_destroy();
