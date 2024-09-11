@@ -1,0 +1,1 @@
+enemy = [obj_ant, obj_ant_red]

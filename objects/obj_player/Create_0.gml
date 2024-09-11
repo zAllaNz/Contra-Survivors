@@ -1,8 +1,8 @@
 // Atributos do personagem
 move_speed = 4;
-armor = 4;
+armor = 3;
 hp = 20;
-fire_rate = 15;
+fire_rate = 20;
 damage = 5;
 iframe_max = 60;
 iframe_on = false;
@@ -11,7 +11,6 @@ iframe_count = 0;
 hp_atual = hp;
 x_arma = 28;
 y_arma = 9;
-instance_create_layer(x+x_arma, y+y_arma,"instances", obj_teste); // Temporário (excluir)
 state = character_state.idle;
 time_since_last_shot = 0;
 xp = 0;
@@ -95,8 +94,8 @@ function speed_up(){
 	move_speed += move_speed * 0.1;
 }
 
-function hp_up(qntd){
-	hp += qntd;
+function hp_up(){
+	hp += 5;
 }
 
 function hp_decrease(damage){
@@ -117,12 +116,12 @@ function hp_zero(){
 	}	
 }
 
-function armor_up(qntd){
-	armor += qntd;
+function armor_up(){
+	armor++;
 }
 
-function fire_rate_up(qntd){
-	fire_rate -= qntd;
+function fire_rate_up(){
+	fire_rate--;
 }
 
 function damage_up(qntd){

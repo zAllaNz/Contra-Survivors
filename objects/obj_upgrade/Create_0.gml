@@ -24,27 +24,27 @@ var speed_up_function = function() {
 };
 
 var armor_function = function() {
-    player.armor_up(3);
+    player.armor_up();
 };
 
 var hp_function = function() {
-    player.hp_up(10);
+    player.hp_up();
 };
 
 var fire_rate_function = function() {
-    player.fire_rate_up(1);
+    player.fire_rate_up();
 };
 
 var damage_function = function() {
-    player.damage_up(10);
+    player.damage_up(3);
 };
 
 dataset = ds_grid_create(upgrades.lenght, 0);
 scr_ds_grid_add_upgrade("SPEED", speed_up_function, "Aumenta a velocidade base\n em 12.5%");
-scr_ds_grid_add_upgrade("DEFENCE", armor_function, "Aumenta a defesa base\n em X%");
-scr_ds_grid_add_upgrade("HP", hp_function, "Aumenta em 10 a vida máxima");
-scr_ds_grid_add_upgrade("FIRE RATE", fire_rate_function, "Aumenta a velocidade de tiro\n em x%");
-scr_ds_grid_add_upgrade("DAMAGE", damage_function, "Aumenta o dano base\n em 12.5%");
+scr_ds_grid_add_upgrade("DEFENCE", armor_function, "Aumenta a defesa base\n em 1");
+scr_ds_grid_add_upgrade("HP", hp_function, "Aumenta em 5 a vida maxima");
+scr_ds_grid_add_upgrade("FIRE RATE", fire_rate_function, "Aumenta a velocidade de tiro\n em 1");
+scr_ds_grid_add_upgrade("DAMAGE", damage_function, "Aumenta o dano base\n em 3");
 
 
 

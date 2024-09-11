@@ -1,9 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_teste",
+  "name": "obj_teste_spawn",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -28,9 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_teste",
-    "path": "sprites/spr_teste/spr_teste.yy",
+    "name": "spr_spawner",
+    "path": "sprites/spr_spawner/spr_spawner.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

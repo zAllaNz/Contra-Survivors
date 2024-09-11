@@ -1,11 +1,11 @@
 player = obj_player;
-enemy_damage = 6;
+enemy_damage = 5 + player.level;
 radius = 20;
-move_speed = 1;
+move_speed = 1 + (player.level / 10);
 angle = -1;
 hspd = -1;
 vspd = -1;
-hp_total = 20;
+hp_total = 20 + player.level;
 hp = hp_total;
 iframe_max = 10;
 iframe_on = false;
@@ -83,6 +83,7 @@ function hp_decrease(damage){
 		if(hp <= 0){
 			selecionar_orb()
 			instance_create_layer(x, y, "instances", efeito_explosion);
+			global.spawn_control--;
 			instance_destroy();
 		}
 	}
