@@ -72,6 +72,7 @@ function increase_level(){
 }
 
 function set_xp_to_levelup(){
+	xp = 0;
 	xp_to_levelup *= 1.5;
 	xp_to_levelup = round(xp_to_levelup);
 }
@@ -100,9 +101,9 @@ function hp_up(){
 
 function hp_decrease(damage){
 	var aux = (armor - damage)
-	if(hp > 0){
+	if(hp_atual > 0){
 		if(aux < 0 and !iframe_on){
-			hp += aux;
+			hp_atual += aux;
 			hp_zero();
 		}
 		iframe_on = true;
