@@ -1,0 +1,1 @@
+audio_play_sound(msc_stage, 0, true);

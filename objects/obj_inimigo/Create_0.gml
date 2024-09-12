@@ -82,6 +82,7 @@ function hp_decrease(damage){
 		iframe_on = true;
 		if(hp <= 0){
 			selecionar_orb()
+			audio_play_sound(sfx_enemy_death, 10, false);
 			instance_create_layer(x, y, "instances", efeito_explosion);
 			global.spawn_control--;
 			instance_destroy();
@@ -97,7 +98,6 @@ function selecionar_orb() {
         acumulado += orb_chance[i];
         if (random_value < acumulado) {
 			instance_create_layer(x, y, "lower", orb_list[i]);
-			show_debug_message(random_value);
 			return;
         }
     }

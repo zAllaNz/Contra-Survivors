@@ -1,0 +1,1 @@
+audio_play_sound(msc_casuality_of_war, 0, false);

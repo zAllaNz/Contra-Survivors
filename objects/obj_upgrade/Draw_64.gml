@@ -2,8 +2,6 @@ if(!player.pause){
 	exit;
 }
 
-player_damage = player.damage;
-
 draw_set_alpha(0.5);
 draw_rectangle_color(0, 0, display_get_gui_width(), display_get_gui_height(), c_black, c_black, c_black, c_black, false);
 draw_set_alpha(1);
@@ -20,6 +18,7 @@ for(var i = 0; i < upgrade_num; i++){
 		draw_text(mouse_xx, mouse_yy, "oi");
 		if(mouse_check_button_pressed(mb_left)){
 			escolher = true;
+			audio_play_sound(sfx_up_sound, 10, false);
 			var aux = ds_grid_get(dataset, upgrades.scripts, item);
 			aux();
 			scr_switch_pause();

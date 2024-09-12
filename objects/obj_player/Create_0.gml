@@ -18,7 +18,14 @@ level = 0;
 xp_to_levelup = 30;
 collect_radius = 50;
 pause = false;
-teste = false;
+teste = false; 
+
+count_death = 200;
+count_aux = 0;
+
+regen_timer = 15 * 60;
+regen_count = 0;
+regen = 1;
 
 
 enum character_state{
@@ -110,8 +117,25 @@ function hp_decrease(damage){
 	}
 }
 
+function hp_regen(){
+	regen_count++;
+	if(regen_count >= regen_timer){
+		regen_count = 0;
+		if(hp_atual <= hp){
+			if((hp_atual + regen) <= hp){
+				hp_atual += regen
+			}
+			else{
+				hp_atual = hp;
+			}
+		}
+	}
+}
+
 function hp_zero(){
-	if(hp <= 0){
+	if(hp_atual <= 0){
+		hp_atual = 0;
+		audio_play_sound(sfx_player_death, 10, false);
 		state = character_state.death;
 		image_index = 0;
 	}	
@@ -129,5 +153,10 @@ function damage_up(qntd){
 	damage += qntd;
 }
 
+function regen_up(){
+	regen++;
+}
 
-
+function radius_up(qntd){
+	collect_radius += qntd;
+}

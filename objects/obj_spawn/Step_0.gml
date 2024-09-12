@@ -1,7 +1,7 @@
 if(player.pause){
 	exit;
 }
-
+randomize();
 spawn_count++;
 if(spawn_count >= spawn_max and global.spawn_control <= 150){
 	spawn_count = 0 

@@ -7,7 +7,6 @@ if(pause){
 	exit;
 }
 
-show_debug_message(level);
 var ponta_arma_x = x + lengthdir_x(x_arma, image_angle) - lengthdir_y(y_arma, image_angle);
 var ponta_arma_y = y + lengthdir_y(x_arma, image_angle) + lengthdir_x(y_arma, image_angle);
 
@@ -20,6 +19,7 @@ if(target != noone){
 
 if(click and state != character_state.death){
 	if(time_since_last_shot >= fire_rate){
+		audio_play_sound(sfx_bullet, 10, false);
 		instance_create_layer(ponta_arma_x, ponta_arma_y, "projetil", obj_gun);
 		time_since_last_shot = 0;
 	}
@@ -44,7 +44,7 @@ switch state{
 	case character_state.idle:
 		sprite_index = spr_player_idle;
 		move_e_colide(move_speed, move_x, move_y);
-		
+		hp_regen()
 		if(move_x != 0 or move_y != 0){
 			state = character_state.walk;	
 		}
@@ -53,7 +53,7 @@ switch state{
 	case character_state.walk:
 		sprite_index = spr_player_walk;
 		move_e_colide(move_speed, move_x, move_y);
-		
+		hp_regen()
 		if(move_x == 0 and move_y == 0){
 			state = character_state.idle;	
 		}
@@ -64,5 +64,9 @@ switch state{
 		if(image_index = image_number){
 			image_speed = 0;
 		}
+		if(count_aux >= count_death){
+			room_goto(rm_gameover)
+		}
+		count_aux++;
 	break
 }

@@ -5,3 +5,4 @@ bar_x = 135;
 bar_y = 20;
 bar_height_xp = 6;
 bar_y_xp = 44;
+tempo_total = 10 * 60;
